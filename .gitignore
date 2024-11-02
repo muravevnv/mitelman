@@ -248,5 +248,4 @@ paket-files/
 .idea
 *.env
 postgres-data
-Landing/dist/
 
