@@ -1,0 +1,59 @@
+.header {
+  padding: 20px 0;
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__logo {
+    display: block;
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  &__menu {
+    max-width: 1076px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include mq(xxl) {
+      max-width: 900px;
+    }
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      @include mq(lg) {
+        gap: 40px;
+      }
+    }
+
+    &-item {
+      font-size: 24px;
+      border-bottom: 1px solid transparent;
+      transition: 0.25s ease-in-out;
+
+      &.is-active {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+
+      @media(any-hover: hover) {  
+        &:hover { 
+          border-color: currentColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 10px;
+  width: auto; 
+  padding: 10px 10px 10px 20px;
+  border: 1px solid var(--color-whte);
+  background-color: var(--color-whte);
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: .25s ease-in-out;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-image: url('../img/icons/arrow-btn.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: .25s ease-in-out;
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: cl(primary-hover);
+      border-color: cl(primary-hover);
+      color: cl(whte);
+
+      svg {
+        color: cl(whte);
+      }
+    }
+  }
+}

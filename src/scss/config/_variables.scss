@@ -1,0 +1,25 @@
+$colors: (
+  "whte": #fff,
+  "blck": #000000,
+  "text": #161815,
+  "alt": #96979B,
+  "primary": #26438A,
+  "secondary": #E42D24,
+  "primary-light": #EBEBF5,
+);
+
+
+:root {
+  @if $colors {
+    @each $key, $value in $colors {
+      --color-#{$key}: #{$value};
+      --color-#{$key}--rgb: #{hextorgb($value)};
+    }
+  }
+  --container-width: 1800px;
+  --container-pad: 80px;
+  --font-main: "Inter", sans-serif;
+  --font-title: "Inter", sans-serif;
+  --font-size: 16px;
+  --transition: 0.3s ease-in-out;
+}

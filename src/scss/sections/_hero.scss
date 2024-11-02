@@ -1,0 +1,52 @@
+.hero {
+  padding-top: 30px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__img {
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 40px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 60px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: var(--color-primary-light);
+    background-image: url('../img/hero/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  &__person {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    margin-top: auto;
+    font-size: 20px;
+    max-width: 480px;
+  }
+}
