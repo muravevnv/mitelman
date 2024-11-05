@@ -1,14 +1,8 @@
-section.section.subscribe 
-  .subscribe__container.container
-    .subscribe__main 
-      .subscribe__main-info
-        picture.subscribe__main-logo 
-          img(src="./img/logo-program-big.svg", alt="")
-        a(href="#" style="../img/icons/arrow-btn.svg").subscribe__main-btn.btn Подробнее
-      picture.subscribe__main-img
-        img(src="./img/subscribe/subscribe.webp", alt="")
-    .subscribe__row 
-      .subscribe__row-title Подписка на новости
-      form.subscribe__form(action="")
-        input(type="text" placeholder="Введите ваш e-mail").subscribe__form-input  
-        a(href="#" style="../img/icons/arrow-btn.svg").subscribe__form-btn.btn Подписаться
+section.subscribe.section 
+  .container 
+    .subscribe__inner 
+      .subscribe__title Подписаться на новости
+      form.subscribe__form(action="#")
+        .subscribe__input
+          input(type="text" placeholder="Введите ваш e-mail").form-control 
+        button(type="submit").subscribe__btn.btn Подписаться

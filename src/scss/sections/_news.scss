@@ -1,99 +1,97 @@
 .news {
 
-  &__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 50px;
-  }
-
   &__title {
+    margin-bottom: 50px;
     color: var(--color-primary);
-  }
 
-  &__btn {
-    padding: 18px 58px;
-    font-size: 20px;
-    text-align: center;
-    border: 1px solid var(--color-primary);
-    border-radius: 50px;
-    transition: 0.25s ease-in-out;
-
-    @media(any-hover: hover) {
-      &:hover {
-        background-color: var(--color-primary);
-        color: var(--color-whte);
-      }
+    @include mq(md)  {
+      margin-bottom: 20px;
     }
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+
+    @include mq(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.news-item {
+  background-color: var(--color-primary-light);
+  border-radius: 40px;
+  padding: 20px;
+
+  @include mq(md)  {
+    padding: 16px;
+    border-radius: 22px;
   }
 
-  &__item {
-    padding: 20px;
-    border-radius: 40px;
-    background-color: var(--color-primary-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 40px;
+  &__img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
 
-    &-info {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 40px 40px 40px 20px;
+    @include mq(md) {
+      margin-bottom: 16px;
+      border-radius: 16px;
     }
 
-    &-img {
+    img {
       display: block;
-      max-width: 795px;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 50 / 27;
-      flex-shrink: 0;
+      border-radius: 30px;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 30px;
+      @include mq(md) {
+        border-radius: 18px;
       }
     }
+  }
 
-    &-date {
-      font-size: 24px;
-      color: var(--color-alt);
-      margin-bottom: 30px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 320px;
+
+    @include mq(md)  {
+      min-height: initial;
+      padding: 0 16px;
     }
+  }
 
-    &-title {
-      font-size: 36px;
-      line-height: 1.32;
-      color: var(--color-text);
-      width: 100%;
+  &__date {
+    font-size: 24px;
+    color: cl(text, 0.4);
+    margin-bottom: 30px;
+
+    @include mq(md)  {
+      margin-bottom: 16px;
+      font-size: 16px;
     }
+  }
 
-    &-link {
+  &__title {
+    font-size: 32px;
+    margin-bottom: 24px;
+
+    @include mq(md)  {
       font-size: 20px;
-      line-height: 1.1;
-      border-bottom: 1px solid currentColor;
-      margin-top: auto;
-      cursor: pointer;
-      transition: 0.25s ease-in-out;
+    }
+  }
 
-      @media(any-hover: hover) {
-        &:hover {
-          color: var(--color-primary);
-        }
-      }
+  &__link {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: auto;
+    border-bottom: 1px solid currentColor;
+
+    @include mq(md)  {
+      font-size: 16px;
     }
   }
 }

@@ -6,7 +6,57 @@
     padding: 80px 0;
   }
 
+  @include mq(md) {
+    padding: 40px 0;
+  }
+
   + .section {
     padding-top: 0;
+  }
+}
+
+.inner-page {
+  padding: 50px 0 100px;
+
+  .section:last-child {
+    padding-bottom: 0;
+  }
+
+  .section:first-child {
+    padding-top: 0;
+  }
+
+  @include mq(md) {
+    padding: 40px 0 80px;
+  }
+}
+
+.slider-navigation {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --size: 44px;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 12px;
+    display: block;
+    mask: var(--icon) center center / contain no-repeat;
+    -webkit-mask: var(--icon) center center / contain no-repeat;
+    background-color: var(--color-primary);
   }
 }

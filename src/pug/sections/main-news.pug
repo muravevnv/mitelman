@@ -1,0 +1,27 @@
+section.main-news.section 
+  .container 
+    .main-news__head 
+      h2.main-news__title.h2 Новости
+      a(href="#").main-news__btn Еще новости
+    .main-news__list(data-slider="main-news")  
+      .swiper-wrapper  
+        a(href="#").main-news__item.swiper-slide
+          .main-news__item-info 
+            .main-news__item-date 21.08.24
+            .main-news__item-title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+            .main-news__item-link(href="#") Читать подробнее
+          picture.main-news__item-img 
+            source(srcset="./img/news/news-01.png" type="image/png")
+            img(src="./img/news/news-01.webp", alt="")
+        a(href="#").main-news__item.swiper-slide 
+          .main-news__item-info 
+            .main-news__item-date 21.08.24
+            .main-news__item-title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+            .main-news__item-link(href="#") Читать подробнее
+          picture.main-news__item-img 
+            source(srcset="./img/news/news-02.png" type="image/png")
+            img(src="./img/news/news-02.webp", alt="")
+    .main-news__navigation
+      .slider-navigation 
+        button.slider-control(stype="button" style="--icon: url('../img/icons/arrow-slider-prev.svg')" data-slider-prev="main-news")
+        button.slider-control(stype="button" style="--icon: url('../img/icons/arrow-slider-next.svg')" data-slider-next="main-news")

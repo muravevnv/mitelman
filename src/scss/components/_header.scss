@@ -1,5 +1,9 @@
 .header {
-  padding: 20px 0;
+  padding: 20px 0 50px;
+
+  @include mq(md) {
+    padding: 10px 0 30px;
+  }
   
   &__inner {
     display: flex;
@@ -12,6 +16,10 @@
     display: block;
     width: 200px;
     flex-shrink: 0;
+
+    @include mq(md)  {
+      width: 100px;
+    }
   }
 
   &__menu {
@@ -24,6 +32,10 @@
 
     @include mq(xxl) {
       max-width: 900px;
+    }
+
+    @include mq(md)  {
+      display: none;
     }
   }
 

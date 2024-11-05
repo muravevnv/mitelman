@@ -24,7 +24,7 @@
       <section class="hero"> 
         <div class="container hero__container"> 
           <picture class="hero__img"> 
-            <option srcset="./img/hero/hero.jpg" type="image/jpeg"></option><img src="./img/hero/hero.webp" alt="">
+            <source srcset="./img/hero/hero.jpg" type="image/jpeg"><img src="./img/hero/hero.webp" alt="">
           </picture>
           <div class="hero__info"> 
             <div class="hero__title h1"> <span>Родному</span>городу - реальные дела!</div>
@@ -33,45 +33,50 @@
           </div>
         </div>
       </section>
-      <section class="news section"> 
+      <section class="main-news section"> 
         <div class="container"> 
-          <div class="news__head"> 
-            <h2 class="news__title h2">Новости</h2><a class="news__btn" href="#">Еще новости</a>
+          <div class="main-news__head"> 
+            <h2 class="main-news__title h2">Новости</h2><a class="main-news__btn" href="#">Еще новости</a>
           </div>
-          <div class="news__list"> 
-            <div class="news__item"> 
-              <div class="news__item-info"> 
-                <div class="news__item-date">21.08.24</div>
-                <div class="news__item-title">Волонтеры движения помогли благотворительному фонду "ДоброДомик"</div><a class="news__item-link" href="#">Читать подробнее</a>
-              </div>
-              <picture class="news__item-img"> 
-                <source srcset="./img/news/news-01.png" type="image/png"><img src="./img/news/news-01.webp" alt="">
-              </picture>
-            </div>
-            <div class="news__item"> 
-              <div class="news__item-info"> 
-                <div class="news__item-date">21.08.24</div>
-                <div class="news__item-title">Волонтеры движения помогли благотворительному фонду "ДоброДомик"</div><a class="news__item-link" href="#">Читать подробнее</a>
-              </div>
-              <picture class="news__item-img"> 
-                <source srcset="./img/news/news-02.png" type="image/png"><img src="./img/news/news-02.webp" alt="">
-              </picture>
+          <div class="main-news__list" data-slider="main-news"> 
+            <div class="swiper-wrapper"> <a class="main-news__item swiper-slide" href="#">
+                <div class="main-news__item-info"> 
+                  <div class="main-news__item-date">21.08.24</div>
+                  <div class="main-news__item-title">Волонтеры движения помогли благотворительному фонду "ДоброДомик"</div>
+                  <div class="main-news__item-link" href="#">Читать подробнее</div>
+                </div>
+                <picture class="main-news__item-img"> 
+                  <source srcset="./img/news/news-01.png" type="image/png"><img src="./img/news/news-01.webp" alt="">
+                </picture></a><a class="main-news__item swiper-slide" href="#"> 
+                <div class="main-news__item-info"> 
+                  <div class="main-news__item-date">21.08.24</div>
+                  <div class="main-news__item-title">Волонтеры движения помогли благотворительному фонду "ДоброДомик"</div>
+                  <div class="main-news__item-link" href="#">Читать подробнее</div>
+                </div>
+                <picture class="main-news__item-img"> 
+                  <source srcset="./img/news/news-02.png" type="image/png"><img src="./img/news/news-02.webp" alt="">
+                </picture></a></div>
+          </div>
+          <div class="main-news__navigation">
+            <div class="slider-navigation"> 
+              <button class="slider-control" stype="button" style="--icon: url('../img/icons/arrow-slider-prev.svg')" data-slider-prev="main-news"></button>
+              <button class="slider-control" stype="button" style="--icon: url('../img/icons/arrow-slider-next.svg')" data-slider-next="main-news"></button>
             </div>
           </div>
         </div>
       </section>
-      <section class="section subscribe"> 
-        <div class="subscribe__container container">
-          <div class="subscribe__main"> 
-            <div class="subscribe__main-info">
-              <picture class="subscribe__main-logo"> <img src="./img/logo-program-big.svg" alt=""></picture><a class="subscribe__main-btn btn" href="#" style="../img/icons/arrow-btn.svg">Подробнее</a>
+      <section class="section about-info"> 
+        <div class="about-info__container container">
+          <div class="about-info__main"> 
+            <div class="about-info__main-info">
+              <picture class="about-info__main-logo"> <img src="./img/logo-program-big.svg" alt=""></picture><a class="about-info__main-btn btn" href="#" style="../img/icons/arrow-btn.svg">Подробнее</a>
             </div>
-            <picture class="subscribe__main-img"><picture><source srcset="./img/subscribe/subscribe.webp" type="image/webp"><img src="./img/subscribe/subscribe.webp" alt=""></picture></picture>
+            <picture class="about-info__main-img"><picture><source srcset="./img/subscribe/subscribe.webp" type="image/webp"><img src="./img/subscribe/subscribe.webp" alt=""></picture></picture>
           </div>
-          <div class="subscribe__row"> 
-            <div class="subscribe__row-title">Подписка на новости</div>
-            <form class="subscribe__form" action="">
-              <input class="subscribe__form-input" type="text" placeholder="Введите ваш e-mail"><a class="subscribe__form-btn btn" href="#" style="../img/icons/arrow-btn.svg">Подписаться</a>
+          <div class="about-info__row"> 
+            <div class="about-info__row-title">Подписка на новости</div>
+            <form class="about-info__form" action="">
+              <input class="form-control about-info__form-input" type="text" placeholder="Введите ваш e-mail"><a class="about-info__form-btn btn" href="#" style="../img/icons/arrow-btn.svg">Подписаться</a>
             </form>
           </div>
         </div>
@@ -95,5 +100,6 @@
         </div>
       </div>
     </div>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

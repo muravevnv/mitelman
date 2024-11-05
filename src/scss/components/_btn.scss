@@ -29,6 +29,16 @@
     transition: .25s ease-in-out;
   }
 
+  @include mq(sm) {
+    padding: 5px 5px 5px 11px;
+    font-size: 14px;
+
+    &::after {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
   @media(any-hover: hover) {
     &:hover {
       background-color: cl(primary-hover);
@@ -37,6 +47,22 @@
 
       svg {
         color: cl(whte);
+      }
+    }
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--secondary {
+    background-color: var(--color-third);
+    color: var(--color-whte);
+
+    @media(any-hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
       }
     }
   }

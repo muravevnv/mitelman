@@ -1,22 +1,51 @@
-section.news.section 
-  .container 
-    .news__head 
-      h2.news__title.h2 Новости
-      a(href="#").news__btn Еще новости
+section.news
+  .container
+    h2.news__title.h2 Новости
     .news__list 
-      .news__item 
-        .news__item-info 
-          .news__item-date 21.08.24
-          .news__item-title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
-          a.news__item-link(href="#") Читать подробнее
-        picture.news__item-img 
+      a(href="#").news-item 
+        picture.news-item__img 
           source(srcset="./img/news/news-01.png" type="image/png")
           img(src="./img/news/news-01.webp", alt="")
-      .news__item 
-        .news__item-info 
-          .news__item-date 21.08.24
-          .news__item-title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
-          a.news__item-link(href="#") Читать подробнее
-        picture.news__item-img 
-          source(srcset="./img/news/news-02.png" type="image/png")
-          img(src="./img/news/news-02.webp", alt="")
+        .news-item__info
+          .news-item__date 21.08.24
+          .news-item__title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+          .news-item__link Читать подробнее
+      a(href="#").news-item 
+        picture.news-item__img 
+          source(srcset="./img/news/news-01.png" type="image/png")
+          img(src="./img/news/news-01.webp", alt="")
+        .news-item__info
+          .news-item__date 21.08.24
+          .news-item__title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+          .news-item__link Читать подробнее
+      a(href="#").news-item 
+        picture.news-item__img 
+          source(srcset="./img/news/news-01.png" type="image/png")
+          img(src="./img/news/news-01.webp", alt="")
+        .news-item__info
+          .news-item__date 21.08.24
+          .news-item__title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+          .news-item__link Читать подробнее
+      a(href="#").news-item 
+        picture.news-item__img 
+          source(srcset="./img/news/news-01.png" type="image/png")
+          img(src="./img/news/news-01.webp", alt="")
+        .news-item__info
+          .news-item__date 21.08.24
+          .news-item__title Волонтеры движения помогли благотворительному фонду "ДоброДомик"
+          .news-item__link Читать подробнее
+    .news__pagination 
+      .pagination 
+        a.pagination__item.pagination__item--btn(href="#")
+          +svg(16, 16, 'arrows-prev') 
+        a.pagination__item.pagination__item--btn(href="#")
+          +svg(16, 16, 'arrow-prev') 
+        a.pagination__item._is-active(href="#") 1
+        a.pagination__item(href="#") 2
+        a.pagination__item(href="#") 3
+        a.pagination__item.pagination__item--cube(href="#") ...
+        a.pagination__item(href="#") 10
+        a.pagination__item.pagination__item--btn(href="#")
+          +svg(16, 16, 'arrows-next')  
+        a.pagination__item.pagination__item--btn(href="#")
+          +svg(16, 16, 'arrow-next') 

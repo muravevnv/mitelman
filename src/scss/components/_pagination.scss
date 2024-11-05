@@ -1,0 +1,45 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 30px;
+
+  &__item {
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--color-gray);
+    border: 1px solid var(--color-gray);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+
+    &._is-active {
+      background-color: var(--color-primary);
+      color: var(--color-whte);
+      border-color: var(--color-primary);
+    }
+
+    @media(any-hover: hover) {
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-whte);
+        border-color: var(--color-primary);
+      }
+    }
+
+    &--cube {
+      border-radius: 8px;
+    }
+  }
+}

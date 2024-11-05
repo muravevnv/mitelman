@@ -1,0 +1,51 @@
+.breadcrumbs {
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    
+    @include mq(md) {
+      font-size: 16px;
+    }
+
+    a {
+      border-bottom: 1px solid transparent;
+      transition: 0.25s ease-in-out;
+    }
+
+    @media(any-hover: hover) {
+      &:hover {
+        a {
+          border-color: currentColor;
+        }
+      }
+    }
+    
+    &:last-of-type {
+      pointer-events: none;
+    }
+
+    &:not(:last-of-type) {
+      &::after {
+        --size: 24px;
+        content: '';
+        width: var(--size);
+        height: var(--size);
+        background: url('../img/icons/arrow-bc.svg') center center / var(--size) no-repeat;
+
+        @include mq(md) {
+          --size: 16px
+        }
+      }
+    }
+  }
+}

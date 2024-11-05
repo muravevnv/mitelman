@@ -1,0 +1,123 @@
+.team {
+
+  &__title {
+    color: var(--color-primary);
+    margin-bottom: 50px;
+
+    @include mq(md)  {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__desc {
+    max-width: 1090px;
+    margin-bottom: 50px;
+    font-size: 24px;
+
+    @include mq(md)  {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    p + p {
+      margin-top: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    @include mq(xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mq(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--color-third);
+      color: var(--color-whte);
+      border-radius: 40px;
+      height: 100%;
+      font-size: 28px;
+      font-weight: 700;
+      padding: 40px;
+
+      span {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 100px;
+      }
+
+      @include mq(md) {
+        font-size: 24px;
+        border-radius: 22px;
+        min-height: 320px;
+
+        span {
+          font-size: 64px;
+          margin-bottom: 10px;
+        }
+      }
+
+      @include mq(sm) {
+        font-size: 16px;
+        padding: 16px;
+
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+
+    &-person {
+      width: 100%;
+      height: 100%;
+
+      &-img {
+        display: block;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 40px;
+
+          @include mq(md)  {
+            border-radius: 22px;
+          }
+        }
+      }
+
+      &-title {
+        background-color: var(--color-primary-light);
+        border-radius: 50px;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        padding: 25px 12px;
+        margin-top: 10px;
+
+        @include mq(xxl) {
+          font-size: 20px;
+        }
+
+        @include mq(md)  {
+          font-size: 16px;
+          padding: 16px 12px;
+        }
+      }
+    }
+  }
+}

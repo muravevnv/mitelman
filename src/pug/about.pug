@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/style.css")
+    title О нас
+  body 
+    include mixins/_mixins
+    include components/header
+    main 
+      +breadcrumbs(['Главная', 'О нас'])
+      .inner-page
+        include sections/about
+        include sections/team
+        include sections/subscribe
+    include components/footer
