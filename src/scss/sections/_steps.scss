@@ -1,0 +1,95 @@
+.steps {
+
+  &__info {
+    padding: 60px;
+    background-color: cl(primary);
+    color: cl(whte);
+    border-radius: 40px;
+
+    @include mq(md) {
+      padding: 20px;
+      border-radius: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: cl(whte);
+
+    @include mq(md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include mq(md) {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include mq(lg) {
+      gap: 24px;
+    }
+
+    @include mq(sm) {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-num {
+      --size: 80px;
+      width: var(--size);
+      height: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: cl(whte);
+      color: cl(primary);
+      font-size: 24px;
+      font-weight: 600;
+      flex-shrink: 0;
+
+      @include mq(md) {
+        --size: 48px;
+        font-size: 16px;
+      }
+    }
+    
+    &-title {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      @include mq(md)  {
+        font-size: 32px;
+      }
+
+      @include mq(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    &-desc {
+      font-size: 32px;
+
+      @include mq(md)  {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+  }
+}

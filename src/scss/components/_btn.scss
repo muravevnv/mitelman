@@ -66,4 +66,20 @@
       }
     }
   }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--xl {
+    padding: 40px;
+    font-size: 32px;
+    justify-content: center;
+
+    @include mq(md) {
+      font-size: 16px;
+      padding: 24px;
+      border-radius: 22px;
+    }
+  }
 }

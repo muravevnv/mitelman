@@ -37,5 +37,15 @@ p {
 }
 
 .h3 {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--color-primary);
 
+  @include mq(lg) {
+    font-size: 32px;
+  }
+
+  @include mq(md) {
+    font-size: 20px;
+  }
 }

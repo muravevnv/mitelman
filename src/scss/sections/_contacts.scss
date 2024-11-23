@@ -1,0 +1,80 @@
+.contacts {
+
+  &__title {
+    color: cl(primary);
+    margin-bottom: 50px;
+
+    @include mq(md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @include mq(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    @include mq(md) {
+      border-radius: 16px;
+    }
+  }
+
+  &__info {
+    border-radius: 20px;
+    background-color: cl(primary-light);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    @include mq(xl) {
+      padding: 40px;
+    }
+
+    @include mq(md) {
+      padding: 24px;
+      border-radius: 16px;
+      gap: 16px;
+    }
+
+
+    &-title {
+      color: cl(blck);
+
+      span {
+        color: cl(primary);
+      }
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 32px;
+
+      @include mq(xl) {
+        font-size: 24px;
+      }
+
+      @include mq(md) {
+        font-size: 16px;
+        gap: 4px;
+      }
+    }
+  }
+}
