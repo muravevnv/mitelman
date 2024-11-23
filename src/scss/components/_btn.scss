@@ -16,27 +16,42 @@
   cursor: pointer;
   transition: .25s ease-in-out;
 
-  &::after {
-    content: '';
+  &__icon {
+    --bg-color: var(--color-primary);
+    --icon-color: var(--color-whte);
     display: block;
     width: 40px;
     height: 40px;
-    background-color: transparent;
-    background-image: url('../img/icons/arrow-btn.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: .25s ease-in-out;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(sm) {
+      width: 28px;
+      height: 28px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: var(--icon-color);
+      mask: url('../img/icons/arrow-btn.svg') center center / contain no-repeat;
+      -webkit-mask: url('../img/icons/arrow-btn.svg') center center / contain no-repeat;
+
+      @include mq(sm) {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 
   @include mq(sm) {
     padding: 5px 5px 5px 11px;
     font-size: 14px;
-
-    &::after {
-      width: 28px;
-      height: 28px;
-    }
   }
 
   @media(any-hover: hover) {
@@ -44,10 +59,6 @@
       background-color: cl(primary-hover);
       border-color: cl(primary-hover);
       color: cl(whte);
-
-      svg {
-        color: cl(whte);
-      }
     }
   }
 
@@ -59,10 +70,19 @@
     background-color: var(--color-third);
     color: var(--color-whte);
 
+    .btn__icon {
+      --bg-color: var(--color-whte);
+      --icon-color: var(--color-third);
+    }
+
     @media(any-hover: hover) {
       &:hover {
         background-color: var(--color-primary);
         border-color: var(--color-primary);
+
+        .btn__icon {
+          --icon-color: var(--color-primary);
+        }
       }
     }
   }
@@ -80,6 +100,10 @@
       font-size: 16px;
       padding: 24px;
       border-radius: 22px;
+    }
+
+    @include mq(sm) {
+      padding: 12px;
     }
   }
 }
