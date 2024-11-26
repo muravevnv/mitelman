@@ -9,15 +9,17 @@
   <body> 
     <div class="header"> 
       <div class="header__inner container"> <a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
-        <div class="header__menu"> 
+        <div class="header__menu js-header-menu">
           <nav class="header__nav"> 
+            <button class="header__nav-close js-header-menu-close" type="button"></button>
             <ul class="header__nav-list"> 
               <li class="header__nav-item is-active"><a href="#">О команде</a></li>
               <li class="header__nav-item"><a href="#">Новости</a></li>
               <li class="header__nav-item"><a href="#">Приемная</a></li>
-            </ul>
-          </nav><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
-        </div>
+            </ul><a class="header__nav-logo" href="#"><img src="./img/logo-program.svg" alt=""></a>
+          </nav>
+        </div><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
+        <button class="header__burger js-header-menu-btn"> <span> </span></button>
       </div>
     </div>
     <main> 
@@ -32,22 +34,7 @@
               <div class="swiper-wrapper">
                 <div class="hero-fond__slide swiper-slide">
                   <picture class="hero-fond__img"> 
-                    <source srcset="./img/hero/hero-fond-01.jpg" type="img/jpeg"><img src="./img/hero/hero-fond-01.webp" alt="">
-                  </picture>
-                </div>
-                <div class="hero-fond__slide swiper-slide">
-                  <picture class="hero-fond__img"> 
-                    <source srcset="./img/hero/hero-fond-02.jpg" type="img/jpeg"><img src="./img/hero/hero-fond-02.webp" alt="">
-                  </picture>
-                </div>
-                <div class="hero-fond__slide swiper-slide">
-                  <picture class="hero-fond__img"> 
                     <source srcset="./img/hero/hero-fond-03.jpg" type="img/jpeg"><img src="./img/hero/hero-fond-03.webp" alt="">
-                  </picture>
-                </div>
-                <div class="hero-fond__slide swiper-slide">
-                  <picture class="hero-fond__img"> 
-                    <source srcset="./img/hero/hero-fond-04.jpg" type="img/jpeg"><img src="./img/hero/hero-fond-04.webp" alt="">
                   </picture>
                 </div>
               </div>

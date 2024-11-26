@@ -4,14 +4,14 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/style.css")
-    title Контакты
+    title О нас
   body 
     include mixins/_mixins
-    include components/header
+    include components/header-secondary
     main 
-      +breadcrumbs(['Главная', 'Контакты'])
+      +breadcrumbs(['Главная', 'О нас'])
       .inner-page
-        include sections/contacts
+        include sections/about
+        include sections/team
         include sections/subscribe
-    include components/footer
-    include includes/scripts
+    include components/footer-secondary

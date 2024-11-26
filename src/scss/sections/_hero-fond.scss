@@ -9,6 +9,10 @@
     align-items: stretch;
     gap: 10px;
     margin-bottom: 10px;
+    background-image: url('../img/hero/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: left bottom;
 
     @include mq(md) {
       border-radius: 22px;
@@ -17,6 +21,7 @@
     @include mq(sm) {
       flex-direction: column;
       align-items: flex-start;
+      background-image: none;
     }
 
   }

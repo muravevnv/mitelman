@@ -17,14 +17,12 @@
     width: 200px;
     flex-shrink: 0;
 
-    @include mq(md)  {
+    @include mq(lg)  {
       width: 100px;
     }
   }
 
   &__menu {
-    max-width: 1076px;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,20 +32,82 @@
       max-width: 900px;
     }
 
-    @include mq(md)  {
+    @include mq(lg)  {
       display: none;
+      position: fixed;
+      max-width: 100%;
+      width: 100%;
+      height: 100vh;
+      inset: 0 0 0 0;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      &.is-open {
+        display: block;
+      }
     }
   }
 
   &__nav {
+
+    @include mq(lg) {
+      position: absolute;
+      max-width: 260px;
+      width: 100%;
+      inset: 0 0 0 auto;
+      background-color: var(--color-whte);
+      padding: 100px 20px 20px; 
+      border-radius: 20px 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-close {
+      display: none;
+
+      @include mq(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+
+        &::after {
+          content: '';
+          width: 32px;
+          height: 32px;
+          mask: url('../img/icons/close.svg') center center / contain no-repeat;
+          -webkit-mask: url('../img/icons/close.svg') center center / contain no-repeat;
+          background-color: var(--color-primary);
+        }
+      }
+    }
 
     &-list {
       display: flex;
       align-items: center;
       gap: 80px;
 
+      @include mq(xl) {
+        gap: 40px;
+      }
+
       @include mq(lg) {
         gap: 40px;
+        flex-direction: column;
+      }
+    }
+
+    &-logo {
+      display: none;
+
+      @include mq(lg) {
+        display: block;
       }
     }
 
@@ -65,6 +125,47 @@
         &:hover { 
           border-color: currentColor;
         }
+      }
+    }
+  }
+
+  &__logo-program {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include mq(lg) {
+      display: block;
+      width: 18px;
+      height: 15px;
+      position: relative;
+      color: var(--color-primary);
+
+      span,
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background-color: currentColor;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      span {
+        top: 6px;
+      }
+
+      &::after {
+        top: 12px;
       }
     }
   }

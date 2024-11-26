@@ -1,14 +1,5 @@
 .team {
 
-  &__title {
-    color: var(--color-primary);
-    margin-bottom: 50px;
-
-    @include mq(md)  {
-      margin-bottom: 20px;
-    }
-  }
-
   &__desc {
     max-width: 1090px;
     margin-bottom: 50px;
@@ -21,6 +12,25 @@
 
     p + p {
       margin-top: 24px;
+    }
+
+    h2 {
+      color: var(--color-primary);
+      margin-bottom: 50px;
+      font-size: 60px;
+      font-weight: 700;
+    
+      @include mq(lg) {
+        font-size: 40px;
+      }
+
+      @include mq(md) {
+        margin-bottom: 20px;
+      }
+    
+      @include mq(sm) {
+        font-size: 20px;
+      }
     }
   }
 

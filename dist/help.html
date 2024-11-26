@@ -9,15 +9,17 @@
   <body> 
     <div class="header"> 
       <div class="header__inner container"> <a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
-        <div class="header__menu"> 
+        <div class="header__menu js-header-menu">
           <nav class="header__nav"> 
+            <button class="header__nav-close js-header-menu-close" type="button"></button>
             <ul class="header__nav-list"> 
               <li class="header__nav-item is-active"><a href="#">О команде</a></li>
               <li class="header__nav-item"><a href="#">Новости</a></li>
               <li class="header__nav-item"><a href="#">Приемная</a></li>
-            </ul>
-          </nav><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
-        </div>
+            </ul><a class="header__nav-logo" href="#"><img src="./img/logo-program.svg" alt=""></a>
+          </nav>
+        </div><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
+        <button class="header__burger js-header-menu-btn"> <span> </span></button>
       </div>
     </div>
     <main> 
@@ -32,9 +34,11 @@
       <div class="inner-page">
         <section class="help"> 
           <div class="container"> 
-            <div class="help__title h1">Хочу помочь</div>
-            <div class="help__subtitle h3">Если вы хотите помочь - свяжитесь с нами. Будем рады вашему участию.</div>
-            <div class="help__text">Мы не принимаем пожертвований. Движение финансируется за счет личных средств Ильи Семеновича Мительмана и средств предприятий.</div>
+            <div class="help__heading">
+              <h1 class="help__title h1">Хочу помочь</h1>
+              <div class="help__subtitle h3">Если вы хотите помочь - свяжитесь с нами. Будем рады вашему участию.</div>
+              <p>Мы не принимаем пожертвований. Движение финансируется за счет личных средств Ильи Семеновича Мительмана и средств предприятий.</p>
+            </div>
             <div class="help__variants"> 
               <div class="help__variant"> 
                 <picture class="help__variant-img"><picture><source srcset="./img/help/help-01.webp" type="image/webp"><img src="./img/help/help-01.webp" alt=""></picture></picture>

@@ -9,15 +9,17 @@
   <body> 
     <div class="header"> 
       <div class="header__inner container"> <a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
-        <div class="header__menu"> 
+        <div class="header__menu js-header-menu">
           <nav class="header__nav"> 
+            <button class="header__nav-close js-header-menu-close" type="button"></button>
             <ul class="header__nav-list"> 
               <li class="header__nav-item is-active"><a href="#">О команде</a></li>
               <li class="header__nav-item"><a href="#">Новости</a></li>
               <li class="header__nav-item"><a href="#">Приемная</a></li>
-            </ul>
-          </nav><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
-        </div>
+            </ul><a class="header__nav-logo" href="#"><img src="./img/logo-program.svg" alt=""></a>
+          </nav>
+        </div><a class="header__logo-program" href="#"> <img src="./img/logo-program.svg" alt=""></a>
+        <button class="header__burger js-header-menu-btn"> <span> </span></button>
       </div>
     </div>
     <main> 
@@ -30,13 +32,13 @@
             </div>
           </div>
       <div class="inner-page">
-        <section class="contacts"> 
+        <section class="contacts" data-map> 
           <div class="container"> 
             <div class="contacts__title h1">Контакты</div>
             <div class="contacts__content"> 
               <div class="contacts__info"> 
-                <div class="contacts__info-title h3">Приемная общественного движения <span>“МЫ74”</span></div>
-                <div class="contacts__info-section"><a class="contacts__info-link" href="#">+7 (351) 271 93 75</a><a class="contacts__info-link" href="#">mi74.help@gmail.com</a></div>
+                <h1 class="contacts__info-title h3">Приемная общественного движения <span>“МЫ74”</span></h1>
+                <div class="contacts__info-section"><a class="contacts__info-link" href="tel:+73512719375">+7 (351) 271 93 75</a><a class="contacts__info-link" href="mailto:mi74.help@gmail.com">mi74.help@gmail.com</a></div>
                 <div class="contacts__info-section">
                   <div class="contacts__info-adress">г. Челябинск, пр. Комсомольский, 112а</div>
                 </div>
@@ -46,7 +48,7 @@
                 </div>
               </div>
               <div class="contacts__map"> 
-                <div class="map"> <picture><source srcset="./img/map.webp" type="image/webp"><img src="./img/map.webp" alt=""></picture></div>
+                <div class="map" id="map"></div>
               </div>
             </div>
           </div>
@@ -87,5 +89,6 @@
         </div>
       </div>
     </div>
+    <script src="js/app.min.js"></script>
   </body>
 </html>
