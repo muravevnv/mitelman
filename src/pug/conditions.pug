@@ -7,11 +7,11 @@ html(lang="ru")
     title Нужна помощь?
   body 
     include mixins/_mixins
-    include components/header
+    include components/header-secondary
     main 
       +breadcrumbs(['Главная', 'Нужна помощь?'])
       .inner-page
         include sections/conditions
         include sections/steps
         include sections/subscribe
-    include components/footer
+    include components/footer-secondary

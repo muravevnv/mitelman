@@ -7,10 +7,10 @@ html(lang="ru")
     title Хочу помочь
   body 
     include mixins/_mixins
-    include components/header
+    include components/header-secondary
     main 
       +breadcrumbs(['Главная', 'Хочу помочь'])
       .inner-page
         include sections/help
         include sections/subscribe
-    include components/footer
+    include components/footer-secondary

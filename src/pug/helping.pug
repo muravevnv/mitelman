@@ -7,10 +7,10 @@ html(lang="ru")
     title Кому мы помогаем
   body 
     include mixins/_mixins
-    include components/header
+    include components/header-secondary
     main 
       +breadcrumbs(['Главная', 'Кому поможем?'])
       .inner-page
         include sections/helping
         include sections/residents
-    include components/footer
+    include components/footer-secondary

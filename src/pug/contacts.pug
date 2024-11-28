@@ -7,11 +7,11 @@ html(lang="ru")
     title Контакты
   body 
     include mixins/_mixins
-    include components/header
+    include components/header-secondary
     main 
       +breadcrumbs(['Главная', 'Контакты'])
       .inner-page
         include sections/contacts
         include sections/subscribe
-    include components/footer
+    include components/footer-secondary
     include includes/scripts
