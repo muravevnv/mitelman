@@ -4,6 +4,17 @@
   @include mq(md) {
     padding: 10px 0 30px;
   }
+
+  &--secondary {
+    
+    .header__logo {
+      width: 315px;
+
+      @include mq(lg)  {
+        width: 160px;
+      }
+    }
+  }
   
   &__inner {
     display: flex;

@@ -1133,6 +1133,10 @@ p {
   padding: 20px 0 50px;
 }
 
+.header--secondary .header__logo {
+  width: 315px;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -2275,6 +2279,10 @@ p {
 
   .h3 {
     font-size: 32px;
+  }
+
+  .header--secondary .header__logo {
+    width: 160px;
   }
 
   .header__logo {
