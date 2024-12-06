@@ -1,14 +1,19 @@
 .hero {
 
   &__container {
+
+  }
+
+  &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 
-    
     @include mq(xs) {
       display: flex;
       flex-direction: column-reverse;
+      background-color: var(--color-primary-light);
+      border-radius: 22px;
     }
   }
 
@@ -51,7 +56,8 @@
     }
     
     @include mq(xs) {
-      height: 310px;
+      height: auto;
+      background: none;
     }
   }
 
@@ -64,6 +70,10 @@
 
     @include mq(md) {
       margin-bottom: 10px;
+    }
+
+    @include mq(xs) {
+      margin-bottom: 16px;
     }
 
     span {
@@ -81,6 +91,10 @@
 
     @include mq(md) {
       font-size: 14px;
+    }
+
+    @include mq(xs) {
+      font-size: 16px;
     }
   }
 
